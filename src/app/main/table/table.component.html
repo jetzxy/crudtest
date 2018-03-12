@@ -1,0 +1,50 @@
+<div class="card" *ngIf="complaints && complaints.length">
+   <div>
+     <div class="card-header">
+       <h5><i class="fas fa-table"></i> Complaint List</h5>
+     </div>
+     <div class="card-body table-responsive">
+       <div class="row">
+          <div class=" col-sm-2">
+              <a  href="/add" target="_blank"  type="button" class="btn btn-md btn-outline-success form-control"><i class="fas fa-plus"></i> Create</a>
+              <!--<button routerLink="/add"  type="button" class="btn btn-outline-primary form-control"><i class="fas fa-plus"></i> Create</button>-->
+            
+              <!--<button type="button" class="btn btn-outline-success form-control" data-toggle="modal" data-target="#myModal">
+                  <i class="fas fa-plus"></i> Create
+                </button>-->
+          
+            </div>
+       </div><br>
+     <table class="table table-hover table-striped">
+       <thead class="thead">
+         <tr>
+           <th>ID</th>
+           <th>Year</th>
+           <th>Report Ref.</th>
+           <th>Domain</th>
+           <th>Com. Emp</th>
+           <th>Type</th>
+           <!--<th>Comment</th>-->
+           <th>Status</th>
+           <!--<th>Email Ref.</th>-->
+           <th>Action</th>
+         </tr>
+       </thead>
+       <tbody id="entry_table">
+         <tr *ngFor="let complaint of complaints">
+          <td>{{complaint.ComplaintId}}</td>
+          <td>{{complaint.Year}}</td>
+          <td>{{complaint.ReportReference}}</td>
+          <td>{{complaint.Domain}}</td>
+          <td>{{complaint.CompanyEmp}}</td>
+          <td>{{complaint.ComplaintType}}</td>
+          <!--<td>{{complaint.Comment}}</td>-->
+          <td>{{complaint.ComplaintStatus}}</td>
+          <!--<td>{{complaint.EmailReference}}</td>-->
+          <td><a class="btn btn-outline-success text-black btn-sm" data-toggle="tooltip" title="Details" [routerLink]="['/update', complaint.ComplaintId]" target="_blank"><i class="fas fa-pencil-alt"></i></a></td>
+      </tr>
+       </tbody>
+     </table>
+     </div>
+   </div>
+ </div>

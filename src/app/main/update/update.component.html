@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header text-dark">
+      <h5><i class="fas fa-info-circle"></i> Details</h5>
+    </div>
+    <form novalidate [formGroup]="complaintForm" (ngSubmit)="updateSubmit()">
+    <div class="card-body">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="form-group col-md-2"></div>
+          <div class="form-group col-md-4">
+            <label>Complaint ID:</label>
+                    <input type="text" class="form-control" formControlName="ComplaintId" readonly>
+                </div>
+                <div class="form-group col-md-4">
+            <label>Year:</label>
+                    <input type="text" class="form-control" placeholder="yyyy" formControlName="Year" >
+                </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-2"></div>
+          <div class="form-group col-md-4">
+            <label>Report Reference:</label>
+                    <input type="text" class="form-control" formControlName="ReportReference">
+                </div>
+                <div class="form-group col-md-4">
+            <label>Domain:</label>
+                    <input type="text" class="form-control" formControlName="Domain">
+                </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-2"></div>
+          <div class="form-group col-md-4">
+            <label>Employee:</label>
+              <select class="form-control" formControlName="CompanyEmp">
+                  <option value="1">DJ</option>
+                  <option value="2">Alexis</option>
+                  <option value="3">Jerome</option>
+              </select>
+          </div>
+            <div class="form-group col-md-4">
+              <label>Complaint Type:</label>
+                <select class="form-control" formControlName="ComplaintType">
+                    <option value="1">Low Priority</option>
+                    <option value="2">Medium Priority</option>
+                    <option value="3">High Priority</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-2"></div>
+          <div class="form-group col-md-4">
+            <label>Complaint Status:</label>
+                <select class="form-control" formControlName="ComplaintStatus">
+                    <option value="1">To Do</option>
+                    <option value="2">On Progress</option>
+                    <option value="3">Done</option>
+                </select>
+          </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2"></div>
+            <div class="form-group col-md-8">
+              <label>Email Reference:</label>
+              <textarea class="form-control" formControlName="EmailReference"></textarea>
+            </div>
+          </div>
+        <div class="row">
+          <div class="form-group col-md-2"></div>
+          <div class="form-group col-md-8">
+            <label>Comment:</label>
+            <textarea class="form-control" formControlName="Comment"></textarea>
+          </div>
+        </div>
+          <div class="row">
+            <div class="form-group col-md-8"></div>
+            <div class="col-sm-4">
+                <button class="btn btn-outline-success btn-md" type="submit"><i class="fas fa-save"></i> Update</button>
+                <!--<button type="button" class="btn btn-outline-secondary btn-md" (click)="mainBack()"><i class="fas fa-angle-left"></i> Back</button>-->
+                <button type="button" class="btn btn-outline-danger btn-md"><i class="fas fa-trash-alt"></i> Delete</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="card-footer">
+    </div>
+    </form>
+  </div>
+</div>

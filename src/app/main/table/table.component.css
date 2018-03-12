@@ -1,0 +1,19 @@
+.fa-plus{
+    margin-right: 5px;
+}
+
+thead{
+    background:	#383838;
+    color: #f1f1f1;
+}
+
+.fa-table{
+    margin-right: 5px;
+    color: #7f9f28;
+}
+th, td{
+    padding: 5px;
+}
+.mv{
+    margin-left: 15px;
+}

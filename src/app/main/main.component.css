@@ -1,0 +1,17 @@
+button{
+    margin-top: 30px;
+
+}
+/*Search icon*/
+.fa-search{
+    margin-right: 5px;
+    color: #7f9f28;
+}
+/*Clear icon*/
+.fa-eraser{
+    margin-right: 5px;
+}
+
+.card-header a{
+    color: black;
+}

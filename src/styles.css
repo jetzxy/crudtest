@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+	background: #f3f3f3;
+	/*background-image: url("https://www.certinergie.be/wp-content/uploads/2017/06/SliderCars.jpg");
+	background-repeat: no-repeat;
+	background-position: center top; 
+	background-size: 100%;*/
+	
+}
+.card{
+    margin-top: 20px;
+}
